@@ -32,7 +32,7 @@ std::string getFromHemmingCode(std::string input) {
         index_of_mistake += (sum % 2) * std::pow(2, i);
     }
 
-    if (index_of_mistake >= 0) {
+    if (index_of_mistake >= 0 && index_of_mistake < static_cast<int>(vec.size())) {
         vec[index_of_mistake] = (vec[index_of_mistake] + 1) % 2 + '0';
     }
 
